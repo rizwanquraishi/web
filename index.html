@@ -13,7 +13,7 @@
   <script id="aclib" type="text/javascript" src="//acscdn.com/script/aclib.js"></script>
   <script type="text/javascript">
       aclib.runAutoTag({
-          zoneId: '74dq6zuuyg',
+          zoneId: 'tbxwcqnsux',
       });
   </script>
 
@@ -209,7 +209,7 @@
       setupGateRound();
       setGateStatus(`Round ${gateRound} of ${TOTAL_ROUNDS}: click the button to start the countdown.`);
     } else {
-      // Reload page functionality as requested
+      // Reload page functionality
       window.location.reload(true);
     }
   });
@@ -283,7 +283,7 @@
   
   function renderFilters(){
     $("filterButtons").innerHTML=categories.map(c=>`<button class="filter ${state.category===c?"active":""}" data-category="${escapeHtml(c)}">${escapeHtml(c)}</button>`).join("");
-    $("categoryList").innerHTML=categories.filter(c=>c!=All).map(c=>`<li><button data-category="${escapeHtml(c)}">${escapeHtml(c)} <span>›</span></button></li>`).join("");
+    $("categoryList").innerHTML=categories.filter(c=>c!=="All").map(c=>`<li><button data-category="${escapeHtml(c)}">${escapeHtml(c)} <span>›</span></button></li>`).join("");
   }
   
   function card(a){
